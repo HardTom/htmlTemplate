@@ -10,6 +10,7 @@ export const constantRouterMap = [
   {path: '/404', component: () => import('@/views/404'), hidden: true},
   {
     path: '',
+    component: () => import('@/views/home/index'),
     redirect: '/home',
     children: [{
       path: 'home',
