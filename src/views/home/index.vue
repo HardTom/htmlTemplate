@@ -1,27 +1,66 @@
 <template>
-  <div class="container-fluid body clearfix">
+  <div class="container-fluid body">
     <div class="container-fluid head">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">XIBU Ectronics Hub</a>
       </nav>
     </div>
     <div class="container-fluid head">
       <div class="carousel slide" data-ride ="carousel">
         <div class="carousel-inner" >
           <div class="carousel-item active">
-            <img :src="img_titile" alt ="" class =" img-responsive img-fluid">
+            <div class="text-center">
+              <img :src="img_titile" alt ="" class="img-responsive">
+            </div>
             <div class ="carousel-caption top">
-                <div class="container-fluid head">
-                  <h1><font size="7" color="white">The most luxurious mobile case and mobile mini bag in 2020</font></h1>
-                  <br />
-                  <p> The reviews presented on this website are based on experiences and opinions of our team.
-          We comprehensively test all the products and try to present the most objective ratings that are subject to change over the course of time.<br /><br />
-
-          *The site earns commission from sales via affiliation with merchants
-                  </p>
+              <div class="container-fluid">
+                <h1><font size="7" color="white">The most luxurious mobile case and mobile mini bag in 2020</font></h1>
+                <br/>
+                <p> The reviews presented on this website are based on experiences and opinions of our team.We comprehensively test all the products and try to present the most objective ratings that are subject to change over the course of time.<br/><br/>*The site earns commission from sales via affiliation with merchants
+                </p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid section">
+      <div class="container-fluid newsletter">
+        <div class="container text-center">
+          <h1>Rating of TOP Phone Case 2020</h1>
+        </div>
+        <div class="container-fluid page">
+          <div class="row">
+            <div class="col-sm-6 text-right">
+              <img :src="img_titile" class="img-fluid">
+            </div>
+            <div class="col-sm-6">
+              <h2>Louis Vuitton</h2>
+              <p> Specifically for iPhone Xr (6.1") 2018. Top quality. Made with Premium PU Leather. 100% Handmade.All-Powerful design iPhone XR flip phone case. Easy access to all ports and controls.iPhone XR leather wallet case with card holders, designed for you to put debit card, credit card or ID card while on the go.Kickstand function is convenient for movie-watching or video-chatting.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm">col-sm</div>
+          <div class="col-sm">col-sm</div>
+          <div class="col-sm">col-sm</div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid section">
+      <div class="container-fluid newsletter">
+        <div class="container text-center">
+          <h1>Rating of TOP Phone Case 2020</h1>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">col-sm-8</div>
+          <div class="col-sm-4">col-sm-4</div>
+        </div>
+        <div class="row">
+          <div class="col-sm">col-sm</div>
+          <div class="col-sm">col-sm</div>
+          <div class="col-sm">col-sm</div>
         </div>
       </div>
     </div>
@@ -68,12 +107,14 @@ export default {
   },
   methods: {
 
+  },
+  watch: {
   }
 }
 </script>
 <style>
 .carousel-caption.top {
-  top: 25%;
+  top: 150px;
 }
 
 .container-fluid.body {
@@ -95,6 +136,11 @@ export default {
   margin: 75px 0;
   padding-right:0px;
   padding-left: 0px;
+}
+
+.container-fluid.page {
+  padding-right: 75px;
+  padding-left: 75px;
 }
 
 .container-fluid.section.collection {
@@ -126,6 +172,11 @@ export default {
     padding-right:0px;
     padding-left: 0px;
   }
+
+  .container-fluid.page {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 }
 @media (max-width:768px){
   .container-fluid.section.index-section {
@@ -136,13 +187,29 @@ export default {
   .container-fluid.footer {
     padding: 2em 0;
   }
+
+  .container-fluid.page {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
 @media (max-width:640px){
-
+  .carousel-caption.top {
+    top: 60px;
+  }
 }
 @media (max-width:480px){
-
+  .carousel-caption.top {
+    top: 30px;
+  }
 }
+
+@media (max-width:420px){
+  .carousel-caption.top {
+    top: 0px;
+  }
+}
+
 @media (max-width:320px){
   .container-fluid.footer {
     padding: 1em 0;
