@@ -1,29 +1,20 @@
 <template>
   <div class="container-fluid body">
-    <div class="container-fluid head">
+    <div class="container-fluid top">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">XIBU Ectronics Hub</a>
       </nav>
     </div>
-    <div class="container-fluid head">
-      <div class="carousel slide" data-ride ="carousel">
-        <div class="carousel-inner" >
-          <div class="carousel-item active">
-            <div class="text-center">
-              <img :src="img_titile" alt ="" class="img-responsive">
-            </div>
-            <div class ="carousel-caption top">
-              <div class="container-fluid">
-                <h1><font size="7" color="white">The most luxurious mobile case and mobile mini bag in 2020</font></h1>
-                <br/>
-                <p> The reviews presented on this website are based on experiences and opinions of our team.We comprehensively test all the products and try to present the most objective ratings that are subject to change over the course of time.<br/><br/>*The site earns commission from sales via affiliation with merchants
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+
+    <div class="container-fluid head" :style="img_head_url">
+      <div class="container-fluid headfont text-center">
+        <h1><font size="7" color="white">The most luxurious mobile case and mobile mini bag in 2020</font></h1>
+        <br/>
+        <p> The reviews presented on this website are based on experiences and opinions of our team.We comprehensively test all the products and try to present the most objective ratings that are subject to change over the course of time.<br/><br/>*The site earns commission from sales via affiliation with merchants
+        </p>
       </div>
     </div>
+
     <div class="container-fluid section">
       <div class="container-fluid newsletter">
         <div class="container text-center">
@@ -99,11 +90,13 @@ export default {
   name: 'home',
   data () {
     return {
-      img_titile
+      img_titile,
+      img_head_url: 'background-image: url(' + img_titile + ')'
     }
   },
   created () {
     //
+    console.log("created")
   },
   methods: {
 
@@ -113,18 +106,25 @@ export default {
 }
 </script>
 <style>
-.carousel-caption.top {
-  top: 150px;
-}
 
 .container-fluid.body {
   padding-right:0px;
   padding-left: 0px;
 }
 
-.container-fluid.head {
+.container-fluid.top {
   padding-right:0px;
   padding-left: 0px;
+}
+
+.container-fluid.head {
+  background-image: url("");
+  padding-right:0px;
+  padding-left: 0px;
+}
+
+.container-fluid.headfont {
+  padding: 75px 75px;
 }
 
 .container-fluid.section {
@@ -192,15 +192,27 @@ export default {
     padding-right: 0px;
     padding-left: 0px;
   }
+
+  .container-fluid.headfont {
+    padding: 45px 45px;
+  }
 }
 @media (max-width:640px){
   .carousel-caption.top {
     top: 60px;
   }
+
+  .container-fluid.headfont {
+    padding: 25px 25px;
+  }
 }
 @media (max-width:480px){
   .carousel-caption.top {
     top: 30px;
+  }
+
+  .container-fluid.headfont {
+    padding: 0 0;
   }
 }
 
